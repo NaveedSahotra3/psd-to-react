@@ -209,60 +209,71 @@ class MainPage extends React.Component {
                                     <div className="col-md-1 color">
                                         <img 
                                         className="ourPartner-img"
-                                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/green-company-logo-design-template-e6cda0adebc58ba974fa4d2d02a14d1e_screen.jpg?ts=1567170398" />
+                                        src={require("./saudi customs@1X.png")} />
                                     </div>
                                     <div className="col-md-1 color">
                                         <img 
                                         className="ourPartner-img"
-                                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/green-company-logo-design-template-e6cda0adebc58ba974fa4d2d02a14d1e_screen.jpg?ts=1567170398" />
+                                        src={require("./Layer 958 copy@1X.png")} />
 
                                     </div>
                                     <div className="col-md-1 color">
                                         <img 
                                         className="ourPartner-img"
-                                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/green-company-logo-design-template-e6cda0adebc58ba974fa4d2d02a14d1e_screen.jpg?ts=1567170398" />
+                                        src={require("./Al-Muhaidib-Stud@1X.png")} 
+                                       />
 
                                     </div>
                                     <div className="col-md-1 color">
                                         <img 
                                         className="ourPartner-img"
-                                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/green-company-logo-design-template-e6cda0adebc58ba974fa4d2d02a14d1e_screen.jpg?ts=1567170398" />
+                                        src={require("./SA ARAMCO@1X.png")} 
+                                         />
 
                                     </div>
                                     <div className="col-md-1 color" >
                                         <img 
                                         className="ourPartner-img"
-                                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/green-company-logo-design-template-e6cda0adebc58ba974fa4d2d02a14d1e_screen.jpg?ts=1567170398" />
+                                        src={require("./budget@1X.png")} 
+                                         />
 
                                     </div>
                                     <div className="col-md-1 color">
                                         <img 
                                         className="ourPartner-img"
-                                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/green-company-logo-design-template-e6cda0adebc58ba974fa4d2d02a14d1e_screen.jpg?ts=1567170398" />
+                                        src={require("./Layer 958 copy 2@1X.png")} 
+                                        />
 
                                     </div>
                                     <div className="col-md-1 color">
                                         <img 
                                         className="ourPartner-img"
-                                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/green-company-logo-design-template-e6cda0adebc58ba974fa4d2d02a14d1e_screen.jpg?ts=1567170398" />
+                                        src={require("./Narcotics Control@1X.png")} 
+
+                                       />
 
                                     </div>
                                     <div className="col-md-1 color">
                                         <img 
                                         className="ourPartner-img"
-                                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/green-company-logo-design-template-e6cda0adebc58ba974fa4d2d02a14d1e_screen.jpg?ts=1567170398" />
+                                        src={require("./Layer 958@1X.png")} 
+
+                                        />
 
                                     </div>
                                     <div className="col-md-1 color">
                                         <img 
                                         className="ourPartner-img"
-                                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/green-company-logo-design-template-e6cda0adebc58ba974fa4d2d02a14d1e_screen.jpg?ts=1567170398" />
+                                        src={require("./Trafic@1X.png")} 
+                                       />
 
                                     </div>
                                     <div className="col-md-1 color">
                                         <img 
                                         className="ourPartner-img"
-                                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/green-company-logo-design-template-e6cda0adebc58ba974fa4d2d02a14d1e_screen.jpg?ts=1567170398" />
+                                        src={require("./Layer 959@1X.png")} 
+
+                                        />
 
                                     </div>
 

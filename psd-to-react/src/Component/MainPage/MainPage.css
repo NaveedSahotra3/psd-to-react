@@ -174,10 +174,12 @@ border-right: 1px solid #dfdfdf;
     /* background-color: violet; */
     height: 120px;
     margin-left: 1%;
+    /* border: 1px solid #dee2e6; */
+
 }
 .ourPartner-img{
-    height: 120px;
-    width: 120px
+    height: 100%;
+    width: 100px
 }
 
 .Listing{
