@@ -30,6 +30,10 @@ body{
 .G-Gate{
     text-align: right;
 }
+.G-Gate img{
+    height: 45px ;
+    width: 300px;
+}
 ul{
     margin-top: 6%;
 
@@ -167,9 +171,13 @@ border-right: 1px solid #dfdfdf;
 }
 
 .color{
-    background-color: violet;
+    /* background-color: violet; */
     height: 120px;
     margin-left: 1%;
+}
+.ourPartner-img{
+    height: 120px;
+    width: 120px
 }
 
 .Listing{
@@ -270,7 +278,7 @@ select option{
     font-size: 0.8rem;
 }
 
-
+ 
 .boxes{
     height: 30px;
     background-color: blue;
@@ -284,11 +292,12 @@ text-align: center;
     background-color: #ffff;
     width: 150px;
     position: relative;
-    left: 50px;
+    left: 100px;
     top: -60px;
     margin-left: 10px;
     border-radius: 5px;
     box-shadow: black;
+    padding: 20px;
 }
 
 .display{
