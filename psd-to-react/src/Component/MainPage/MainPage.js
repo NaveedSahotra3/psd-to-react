@@ -114,10 +114,10 @@ class MainPage extends React.Component {
                             <div class="list-group list-group-flush">
 
 
-                                <a href="#" class="list-group-item list-group-item-action bg-light Active Home btn-primary"> <i style={{ marginLeft: '20%' }, { marginTop: '-20px' }} class="fa fa-home" aria-hidden="true"></i>Home</a>
+                                <a href="#" class="list-group-item list-group-item-action bg-light Active Home btn-primary"> <i style={{ marginLeft: '20%' ,marginTop: '-20px' , color: 'white' }} class="fa fa-home" aria-hidden="true"></i>Home</a>
 
 
-                                <a href="#" class="list-group-item list-group-item-action bg-light"> <i style={{ marginLeft: '20%' }} class="fa fa-search" aria-hidden="true"></i>Search</a>
+                                <a href="#" class="list-group-item list-group-item-action bg-light"> <i style={{ marginLeft: '20%',}} class="fa fa-search" aria-hidden="true"></i>Search</a>
 
 
                                 <a href="#" class="list-group-item list-group-item-action bg-light" > <i style={{ marginLeft: '20%' }} class="fa fa-gavel" aria-hidden="true"></i> Action</a>

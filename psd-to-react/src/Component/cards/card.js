@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState,useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -19,10 +19,7 @@ import '../cards/card1.css'
 import { Button } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
-
-
-
-
+// import GetTime from '../time/time.js'
 
 
 
@@ -30,6 +27,14 @@ import TextField from '@material-ui/core/TextField';
 
 
 const useStyles = makeStyles(theme => ({
+
+
+
+
+
+
+
+
 
   container: {
     display: 'flex',
@@ -50,7 +55,8 @@ const useStyles = makeStyles(theme => ({
     marginLeft: 30,
     marginTop: 20,
 
-    height:'400px'
+    height:'400px',
+    width:'430px'
   },
   media: {
     height: 0,
@@ -78,8 +84,9 @@ const useStyles = makeStyles(theme => ({
     border: "1px solid #dfdfdf",
     height: '50px',
     width: '80px',
-    marginLeft: '20px',
-
+    marginLeft: '50px',
+// float:'right',
+padding: '4px 4px',
     borderRadius: "4px"
   },
   animal: {
@@ -95,6 +102,7 @@ const useStyles = makeStyles(theme => ({
     // marginTop: '15px',
     marginBottom: '15px',
     // width: "100%",
+    // backgroundColor:"#dfdfdf"
 
 
   },
@@ -105,8 +113,12 @@ const useStyles = makeStyles(theme => ({
     borderRadius: "25px",
     border: 'none',
     outline: 'none',
+    width: '130px',
+    height: '30px',
+    fontSize: '0.8rem',
+marginRight:'3px',
     // marginRight: '-150px',
-    // marginTop: '15px'
+    marginTop: '13px'
   },
   liftRight: {
     marginTop: '6px',
@@ -122,9 +134,21 @@ const useStyles = makeStyles(theme => ({
   },
   haha: {
     display: 'flex',
+
     height: '50px',
     marginTop:"30px",
+    // backgroundColor:"#dfdfdf"
+
     
+  },
+  time:{
+// backgroundColor:"#ff4d4d"
+width:'400px',
+paddingTop: '20px'
+
+  },
+  Date1:{
+    marginTop: '10px'
   },
   right: {
     float: 'right',
@@ -136,7 +160,55 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function RecipeReviewCard(props) {
+
+const GetTime = ({start_date,delivery}) => {
+  const calculateTimeLeft = () => {
+    // console.log(new Date(delivery).toString());
+    
+    const difference = +new Date(delivery) - +new Date(); 
+    let timeLeft = {};
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60)
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+  });
+
+  const timerComponents = [];
+
+  Object.keys(timeLeft).forEach(interval => {
+    if (!timeLeft[interval]) {
+      return;
+    }
+
+    timerComponents.push(
+      <span>
+        {timeLeft[interval]} {interval === 'days' ? "D :" : interval === 'hours' ? "H :" : interval === 'seconds' ? "S " : interval === "minutes" ? "M :" : ''}{" "}
+      </span>
+    );
+  });
+  return (
+    <span>{timerComponents.length ? timerComponents : <span>Time's up!</span>}</span>
+  )
+}
+
+
+
+ function RecipeReviewCard(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -171,7 +243,7 @@ export default function RecipeReviewCard(props) {
           <div className={classes.display}>
 
             <h5 className={classes.range}> Range Rover Vogue</h5>
-            <div className={classes.Sar}> <strong>5000</strong> SAR Insurance </div>
+            <div className={classes.Sar}> <strong style={{color:'black'}}>5000</strong> SAR Insurance </div>
 
           </div>
           <div className={classes.animal}> <pre>Pstoo: 6 Hours ago   Location: Al Kharaj    category: Animal</pre>  </div>
@@ -191,8 +263,8 @@ export default function RecipeReviewCard(props) {
 
       <div className={classes.haha}>
         <div className={classes.time}>
-
-          <form className={classes.container} noValidate>
+        <GetTime className={classes.Date1} start_date={new Date()} delivery={new Date("02Jan2021")} />
+          {/* <form className={classes.container} noValidate>
             <TextField
               id="date"
               type="date"
@@ -202,7 +274,7 @@ export default function RecipeReviewCard(props) {
                 shrink: true,
               }}
             />
-          </form>
+          </form> */}
 
         </div>
         <div className={classes.adjbtn}>
@@ -258,3 +330,4 @@ export default function RecipeReviewCard(props) {
     </Card>
   );
 }
+export default RecipeReviewCard
